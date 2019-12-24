@@ -2,14 +2,13 @@
 /* eslint-disable react/react-in-jsx-scope */
 
 import { Component } from '@tarojs/taro'
-import { View, Input,Button } from '@tarojs/components'
-import './user.less'
-import Head from '../../components/head/head';
+import { View } from '@tarojs/components'
 
-class User extends Component {
+
+class Index extends Component {
 
   config = {
-    navigationBarTitleText: '用户中心'
+    navigationBarTitleText: 'user'
   }
 
   componentWillReceiveProps() {
@@ -25,15 +24,11 @@ class User extends Component {
 
   render() {
     return (
-      <View >
-        <Head />
-        <View>
-          <Input placeholder='请输入accesstoken' />
-          <Button>登陆</Button>
-        </View>
+      <View className='index'>
+       user
       </View>
     )
   }
 }
 
-export default User
+export default Index

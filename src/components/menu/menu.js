@@ -24,7 +24,7 @@ import './menu.less';
 
 class Menu extends Component {
     toUser(){
-        Taro.navigateTo({url:'/pages/user/user'});
+        Taro.navigateTo({url:'/pages/login/login'});
     }
     //显示抽屉
     showDrawer() {
