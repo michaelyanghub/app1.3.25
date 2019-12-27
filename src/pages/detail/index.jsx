@@ -10,6 +10,7 @@ import { getTopicInfo, admireTopic,replyContent } from '../../actions/topiclist'
 import TopicInfo from '../../components/topicinfo/topicinfo';
 import Replies from '../../components/topicinfo/replies';
 import ReplyContent from '../../components/topicinfo/ReplyContent';
+
 // const isweapp = process.env.TARO_ENV=='weapp';
 
 @connect(function (store) {
@@ -39,6 +40,7 @@ class Detail extends Component {
         'showReplyContent': false,
     }
     componentWillMount() {
+        
         this.getDetail();
     }
     componentWillReceiveProps(nextProps) {

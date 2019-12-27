@@ -15,3 +15,12 @@ export function accessUserToken(params) {
         return false;
     }
 }
+//获取用户收藏列表
+export async function getCollectList(params){
+    let result = await getJSON(api.topicCollectList+params.loginname);
+    if(result && result.data && result.data.success){
+        return result.data;
+    }else{
+        Taro.showToast({title:'获取收藏列表失败！'})
+    }
+}

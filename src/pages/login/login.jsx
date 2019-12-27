@@ -13,7 +13,7 @@ import { accessUserToken } from '../../actions/user'
 }, function (dispatch) {
   return {
     accessUserToken(params) {
-      dispatch(accessUserToken(params))
+      return dispatch(accessUserToken(params))
     }
   }
 })
@@ -44,10 +44,7 @@ class Login extends Component {
     if (this.state.token) {
       if (this.props.accessUserToken) {
         this.props.accessUserToken({ accesstoken: this.state.token }).then(result => {
-          console.log(47, result);
           Taro.redirectTo({ url: '/pages/user/user' })
-        },err=>{
-          console.log(50, err);
         })
       }
     } else {

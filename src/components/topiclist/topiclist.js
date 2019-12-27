@@ -34,7 +34,7 @@ class TopicList extends Component {
    }
    render() {
       let { list } = this.props;
-      return (<ScrollView style={{ height: '650PX' }} onScrollToLower={this.onScrollToLower.bind(this)} scrollY={true} >{
+      return (<ScrollView onScrollToLower={this.onScrollToLower.bind(this)} scrollY={true} >{
          list.map((item) => <Topic item={item} />)
       }</ScrollView>)
    }

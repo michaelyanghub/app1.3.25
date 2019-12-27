@@ -23,8 +23,17 @@ import './menu.less';
 })
 
 class Menu extends Component {
-    toUser(){
-        Taro.navigateTo({url:'/pages/login/login'});
+    componentDidMount() {
+        console.log('menujs', this.props.user);
+    }
+    toUser() {
+        if (this.props.user && this.props.user.accesstoken) {
+            Taro.navigateTo({ url: '/pages/user/user' });
+        } else {
+            Taro.navigateTo({ url: '/pages/login/login' });
+        }
+
+
     }
     //显示抽屉
     showDrawer() {
